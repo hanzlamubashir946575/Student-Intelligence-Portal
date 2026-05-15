@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>STUDENT PORTAL | Hanzla Mubashir</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Rajdhani:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <canvas id="canvas"></canvas>
+    <div class="master-card">
+        <h1>STUDENT PORTAL</h1>
+        <input type="text" id="nameInp" placeholder="STUDENT FULL NAME">
+        <input type="text" id="rollInp" placeholder="ROLL NUMBER (e.g. 2k24bscs336)">
+        <input type="email" id="emailInp" placeholder="OFFICIAL EMAIL ADDRESS">
+        
+        <button class="btn-access" onclick="initiateScan()">INITIALIZE SCAN</button>
+
+        <div id="loader">
+            <div class="scan-line"></div>
+            <p id="status" style="font-size: 0.8rem; margin-top: 10px;">DECRYPTING DATA STRINGS...</p>
+        </div>
+
+        <div id="resultPanel">
+            <span class="section-label">Current Semester GPA</span>
+            <div class="gpa-main" id="sgpaOut"></div>
+            <span class="section-label">Individual Course Metrics</span>
+            <div class="subject-grid" id="subjectOut"></div>
+            <span class="section-label">Academic Standing (CGPA)</span>
+            <div class="gpa-main" id="cgpaOut" style="font-size: 1.8rem; color: #bc13fe;"></div>
+            <div class="meta-info">
+                <div class="meta-box">
+                    <span class="section-label">Attendance</span>
+                    <span class="meta-val" id="attendOut"></span>
+                </div>
+                <div class="meta-box">
+                    <span class="section-label">Behavior</span>
+                    <span class="meta-val" id="behavOut" style="font-size: 0.9rem;"></span>
+                </div>
+            </div>
+        </div>
+        <div class="footer">SYSTEM DESIGNED BY HANZLA MUBASHIR | 2K24BSCS336</div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
